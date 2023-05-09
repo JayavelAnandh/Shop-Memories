@@ -7,9 +7,13 @@
   
 
 }
+.Appbar:hover{
+    box-shadow:1px 1.5px 2.5px white;
+}
 .mar{
     background-color: black;
     color: white;
+    box-shadow:1px 1.5px 2.5px black;
 }
 .buttons{
     font-size: 18px !important;
@@ -20,4 +24,9 @@
 .mar{
     font-size: 18px;
     font-weight: 600;
+}
+.logo{
+    height: 45px;
+    border-radius: 50%;
+    width: 50px;
 }

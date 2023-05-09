@@ -51,12 +51,12 @@ const HomePage = () => {
                 <p className="card-text">
                   {value.description}
                 </p>
-                <span className="sale">Great Festival Sale</span>
-                <p className="card-text">₹ <span style={{fontSize:"24px"}}>{value.price}</span></p>
-                <p className="card-text">Get it by <b> next Wednesday</b></p>
+                <span className="sale" title="Anniversay discount sale !!!">Great Festival Sale</span>
+                <p className="card-text">₹ <span style={{fontSize:"24px"}} title="Prices may increase after the sale ends">{value.price}</span></p>
+                <p className="card-text">Get it by <b title="Guaranteed 1 week delievery"> next Wednesday</b></p>
                 {userName == "Admin" ? <span><button className="btn btn-primary" onClick={()=>navigate("/edit",{state:value._id})}>Edit</button>
                 <button className="btn btn-danger" onClick={()=>removeData(value._id)}>Remove</button></span>:""}
-                
+                <button className="btn btn-info" title="Add" >Add To Cart</button>
               </div>
             </div>
             

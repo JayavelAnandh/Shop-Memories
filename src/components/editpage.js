@@ -48,7 +48,7 @@ const EditPage=()=>{
             let response = await update.json();
             console.log(response.message)
             swal("Updated Successfully");
-            navigate("/");
+            navigate("/homepage");
         } catch (error) {
             console.log(error);
             alert("Error occured", error);

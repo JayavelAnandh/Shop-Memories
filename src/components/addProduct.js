@@ -25,7 +25,7 @@ const AddProduct =()=>{
             })
             let response = res.json();
             swal("Product Added to Store");
-            navigate("/");
+            navigate("/homepage");
         } catch (error) {
             console.log(error);
             swal("ErrorOccured");
