@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./homepage.css";
 import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
+import DashBoard from "./dashboard";
 const HomePage = () => {
   const [data, setData] = useState([]);
   let userName = localStorage.getItem("userName");
@@ -39,6 +40,7 @@ const HomePage = () => {
       }
   }
   return (
+   <DashBoard>
     <div className="container-lg homepage">
       <div className="row">
         {data.map((value, idx) => {
@@ -62,6 +64,7 @@ const HomePage = () => {
         })}
       </div>
     </div>
+    </DashBoard>
   );
 };
 export default HomePage;

@@ -1,0 +1,23 @@
+.Appbar{
+    background-color: rgb(55, 51, 51) !important;
+    height: 40px;
+    line-height: 30px;
+    display: flex;
+    align-content: center;
+  
+
+}
+.mar{
+    background-color: black;
+    color: white;
+}
+.buttons{
+    font-size: 18px !important;
+    height: 30px;
+    margin-left: 1% !important;
+    font-weight: 500 !important;
+}
+.mar{
+    font-size: 18px;
+    font-weight: 600;
+}
