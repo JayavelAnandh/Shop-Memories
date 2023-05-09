@@ -1,0 +1,26 @@
+.homepage{
+    background-color: rgb(235, 229, 229);
+}
+.card{
+    border-radius: 0%;
+    padding: 7px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: normal;
+}
+
+.card .name{
+    color: rgb(65, 166, 220);
+}
+.card .name::first-letter{
+    text-transform: uppercase;
+}
+.card .sale{
+    background-color: orange;
+    padding: 3px;
+    border-radius: 5px;
+}
+.card .btn{
+    height: 30px;
+    align-items: center;
+    line-height: 10px;
+}

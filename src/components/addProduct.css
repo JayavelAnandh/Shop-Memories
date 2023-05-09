@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Playfair+Display&display=swap');
+.addPage{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.addPage .card{
+    background-color:rgb(235, 183, 87);
+    width: 90%;
+    height: auto;
+    border-radius: 1rem;
+}
+.addPage .card form{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    font-family: 'Playfair Display', serif;
+
+}
+.addPage .card form input{
+    height: 40px;
+    background-color: whitesmoke;
+    border: 1.5px solid orange;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-family: 'Fira Sans', sans-serif !important;
+    font-family: 'Playfair Display', serif;
+}
+.addPage .card form label{
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 1%;
+    text-decoration: underline;
+    
+}
+.addPage .card form button{
+    font-size: 22px;
+    height: 30px;
+    line-height: 15px;
+    width: 80%;
+    margin-left: 10%;
+    font-weight: 500;
+}
+.addPage .imageDisplay span{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 400;
+    font-family:'Fira Sans', sans-serif !important; ;
+}
+.addPage .imageDisplay img{
+    width: 20vw;
+    margin-left: 25px;
+    border-radius: 15px;
+}
+.addPage .imageDisplay img:hover{
+  box-shadow: 1px 1.5px 2.5px slategray;
+}

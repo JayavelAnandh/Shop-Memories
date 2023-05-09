@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Playfair+Display&display=swap');
+.editpage{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.editpage .card{
+    background-color:rgb(235, 183, 87);
+    width: 90%;
+    height: auto;
+    border-radius: 1rem;
+}
+.editpage .card form{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    font-family: 'Playfair Display', serif;
+
+}
+.editpage .card form input{
+    height: 40px;
+    background-color: whitesmoke;
+    border: 1.5px solid orange;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-family: 'Fira Sans', sans-serif !important;
+    font-family: 'Playfair Display', serif;
+}
+.editpage .card form label{
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 1%;
+    text-decoration: underline;
+    
+}
+.editpage .card form button{
+    font-size: 22px;
+    height: 30px;
+    line-height: 15px;
+    width: 80%;
+    margin-left: 10%;
+    font-weight: 500;
+}
