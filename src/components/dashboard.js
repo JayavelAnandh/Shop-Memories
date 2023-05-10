@@ -6,16 +6,16 @@ const DashBoard = ({ title, description, children }) => {
   let logoutMethod = () => {
     navigate("/");
   };
-  let userName = localStorage.getItem("userName");
+  let userGmail = localStorage.getItem("gmail");
   return (
     <div className="main-component base-component">
       <AppBar position="static" className="Appbar">
         <Toolbar variant="dense">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShslosos0mQfh2NN5qwOa8RocP6AXNovWbiw&usqp=CAU" alt="" className="logo"/>
+            <img title="Memories can be earned!!!" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShslosos0mQfh2NN5qwOa8RocP6AXNovWbiw&usqp=CAU" alt="" className="logo"/>
           <Button
             className="buttons"
             color="inherit"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/homepage")}
           >
             <span className="nav-name">HomePage</span>
           </Button>
@@ -23,19 +23,12 @@ const DashBoard = ({ title, description, children }) => {
           <Button
             className="buttons"
             color="inherit"
-            onClick={() => navigate("/details")}
-          >
-            <span className="nav-name">Student List</span>
-          </Button>
-          <Button
-            className="buttons"
-            color="inherit"
-            onClick={() => navigate("/register")}
+            onClick={() => navigate("/")}
           >
             <span className="nav-name">Login</span>
           </Button>
 
-          {userName =="Admin" ? <Button
+          {userGmail == "AdminFounder@gmail.com" ? <Button
             className="buttons"
             color="inherit"
             onClick={() => navigate("/add")}
@@ -53,7 +46,7 @@ const DashBoard = ({ title, description, children }) => {
         </Toolbar>
       </AppBar>
       <header>
-        <marquee className="mar">Antique Amaze</marquee>
+        <marquee className="mar"><span style={{marginRight:"10rem"}}>Antique Amaze </span>   ||       <span style={{marginLeft:"10rem"}}> Memories can be earned !!!</span></marquee>
       </header>
       <main className="main-segment">
         <h2>{description}</h2>

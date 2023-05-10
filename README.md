@@ -1,15 +1,15 @@
 ADMIN CREDENTIALS:
 
-            USERNAME: Admin
+            Gmail: AdminFounder@gmail.com
             PASSWORD: jvlGroupsTN4468
 
 USER CREDENTIALS:
 
-            USERNAME:Consumer1
-            PASSWORD:destination@123
+            Gmail: Antiquelove3@gmail.com
+            PASSWORD: destination@123
 
-            USERNAME:Consumer2
-            PASSWORD:destination@123
+            Gmail: Antiquelove4@gmail.com
+            PASSWORD: destination@123
 
-            USERNAME:Consumer3
-            PASSWORD:destination@123
+            Gmail: Antiquelove5@gmail.com
+            PASSWORD: destination@123

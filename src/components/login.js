@@ -21,6 +21,8 @@ const LogIn = () => {
       });
       let response =await res.json();
       localStorage.setItem("userName",response.userName);
+      localStorage.setItem("gmail",response.gmail);
+
       swal("Logged In successfully","","success");
       navigate("/homepage")
     } catch (error) {
@@ -55,13 +57,20 @@ const LogIn = () => {
             onChange={(event) => setPassword(event.target.value)}
           />
           <br />
+          <div style={{display:"flex",justifyContent:"center"}}>
           <button type="submit" onClick={(event) => handleSubmit(event)}>
             Log in
           </button>
+          </div>
+          
         </form>
         <br/>
-        <p><span onClick={()=>navigate("/forget")}>Forget Password?</span></p>
-        <p>Login <a href="" >Credentials</a> </p>
+        <div style={{display:"flex",justifyContent:"center"}}><p><span onClick={()=>navigate("/forget")} >Forget Password?</span></p></div>
+        <div style={{display:"flex",justifyContent:"space-between"}}>
+        <p>Login <a href="https://github.com/JayavelAnandh/Shop-Memories#readme" target="_blank">Credentials</a></p>
+        <p>Create Your Own Account <span onClick={()=>navigate("/signup")}>HERE!</span></p>
+        </div>
+        
       </div>
     </div>
   );

@@ -20,7 +20,7 @@
 }
 .loginPage .card button{
     margin-top: 20px;
-    margin-left: 60px;
+   
     width: 80%;
     background-color: green;
     border: none;
@@ -55,7 +55,7 @@ form{
 .loginPage .card p{
     font-size: 20px;
 }
-.loginPage .card span{
+.loginPage .card span,a{
     color: green;
     text-decoration: underline;
     font-weight: 600;

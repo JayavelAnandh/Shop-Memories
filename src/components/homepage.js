@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import DashBoard from "./dashboard";
 const HomePage = () => {
   const [data, setData] = useState([]);
-  let userName = localStorage.getItem("userName");
+  let userGmail = localStorage.getItem("gmail");
   
   const navigate = useNavigate();
   useEffect(() => {
@@ -40,7 +40,7 @@ const HomePage = () => {
       }
   }
   return (
-   <DashBoard>
+   
     <div className="container-lg homepage">
       <div className="row">
         {data.map((value, idx) => {
@@ -54,7 +54,7 @@ const HomePage = () => {
                 <span className="sale" title="Anniversay discount sale !!!">Great Festival Sale</span>
                 <p className="card-text">₹ <span style={{fontSize:"24px"}} title="Prices may increase after the sale ends">{value.price}</span></p>
                 <p className="card-text">Get it by <b title="Guaranteed 1 week delievery"> next Wednesday</b></p>
-                {userName == "Admin" ? <span><button className="btn btn-primary" onClick={()=>navigate("/edit",{state:value._id})}>Edit</button>
+                {userGmail == "AdminFounder@gmail.com" ? <span><button className="btn btn-primary" onClick={()=>navigate("/edit",{state:value._id})}>Edit</button>
                 <button className="btn btn-danger" onClick={()=>removeData(value._id)}>Remove</button></span>:""}
                 <button className="btn btn-info" title="Add" >Add To Cart</button>
               </div>
@@ -64,7 +64,7 @@ const HomePage = () => {
         })}
       </div>
     </div>
-    </DashBoard>
+   
   );
 };
 export default HomePage;
