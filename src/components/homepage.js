@@ -39,6 +39,29 @@ const HomePage = () => {
          alert("Error occured", error);
       }
   }
+  const addToCart=async(value)=>{
+      try {
+        let res = await fetch("http://localhost:9000/shop/addToCart",{
+          method:"POST",
+          body:JSON.stringify({
+            _id:value._id,
+            name:value.name,
+            description:value.description,
+            price:value.price,
+            image:value.image
+          }),
+          headers:{
+            "Content-Type":"application/json"
+          }
+        });
+        let response = await res.json();
+        swal(response.message,"","success");
+        retriveAllData();
+      } catch (error) {
+        console.log(error);
+        alert("Error occured", error);
+      }
+  }
   return (
    
     <div className="container-lg homepage">
@@ -56,7 +79,7 @@ const HomePage = () => {
                 <p className="card-text">Get it by <b title="Guaranteed 1 week delievery"> next Wednesday</b></p>
                 {userGmail == "AdminFounder@gmail.com" ? <span><button className="btn btn-primary" onClick={()=>navigate("/edit",{state:value._id})}>Edit</button>
                 <button className="btn btn-danger" onClick={()=>removeData(value._id)}>Remove</button></span>:""}
-                <button className="btn btn-info" title="Add" >Add To Cart</button>
+                <button className="btn btn-info" title="Added product can be purchased from cart" onClick={()=>addToCart(value)}>Add To Cart</button>
               </div>
             </div>
             

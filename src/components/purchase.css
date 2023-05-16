@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap');
+.purchase{
+    height: 100vh;
+}
+.purchase .row{
+    display: flex;
+    justify-content: center;
+}
+.addressBox{
+    width: 100%;
+}
+.addressBox form{
+    display: flex;
+    flex-direction: column;
+}
+select{
+    margin-top: 0%;
+    border:0.1px solid grey;
+    background-color: rgb(236, 229, 229);
+    border-radius: 3px;
+    padding-left: 15px;
+    font-family: 'Exo', sans-serif;
+}
+.addressForm label{
+    margin-bottom: 0%;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Nanum Myeongjo', serif;
+    margin-top: 1rem;
+}
+.addressForm input{
+    border-radius: 5px;
+    border: 1px solid;
+   
+}
+.addressForm button{
+    border: 0px;
+    background-color: orange;
+    height: 2.5rem;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+}

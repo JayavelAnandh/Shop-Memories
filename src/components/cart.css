@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Playfair+Display&family=Roboto+Slab&display=swap');
+
+.cartItems {
+    background-color: white;
+    border: 1px solid;
+}
+
+.cart {
+    background-color: rgb(236, 229, 229);
+}
+
+.main {
+    margin-top: 2rem;
+    margin: 1rem;
+}
+
+.cartImage {
+    width: 100%;
+}
+
+.details p {
+    margin-bottom: 5px !important;
+}
+
+.details .description {
+    font-size: 20px;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+}
+ .green{
+    color: green;
+}
+.details .sale{
+    background-color: orange;
+    padding: 3px;
+    border-radius: 5px;
+}
+.subtotal{
+    display: flex !important;
+    justify-content: flex-end !important;
+    font-size: 20px;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Slab', serif;
+}
+.subtotal span{
+    justify-content:flex-end;
+    font-size: 24px;
+    font-weight: 500;
+}
+.details button{
+    padding: 3px;
+    font-weight: 500;
+    height: auto;
+}
+.payment{
+    margin-left: 20px;
+    background-color: white;
+    height: 25vh;
+    margin-top: 1rem;
+    
+}
+.payment .total{
+    font-size: 18px;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Slab', serif;
+}
+.payment .total span{
+    text-decoration: underline;
+    font-size: 20px;
+}
+.payment button{
+    border: 0px;
+    width: 100%;
+    padding: 2px;
+    background-color: orange;
+    border-radius: 3px;
+    margin-top: 5vh;
+}

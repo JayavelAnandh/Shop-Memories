@@ -43,6 +43,14 @@ const DashBoard = ({ title, description, children }) => {
           >
             <span className="nav-name">Logout</span>
           </Button>
+
+          <Button
+            className="buttons"
+            color="inherit"
+            onClick={()=>navigate("/cart")}
+          >
+            <span className="nav-name">Cart</span>
+          </Button>
         </Toolbar>
       </AppBar>
       <header>
