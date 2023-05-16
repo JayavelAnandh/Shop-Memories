@@ -10,6 +10,7 @@ const HomePage = () => {
   const navigate = useNavigate();
   useEffect(() => {
     retriveAllData();
+    swal("Welcome to ' ANTIQUE AMAZE '   All our products are antique and historical items 💯" ,      "Our website doesn't has any 🚫 replicas")
   }, []);
   const retriveAllData = async () => {
     try {

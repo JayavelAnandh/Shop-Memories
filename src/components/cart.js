@@ -110,7 +110,7 @@ const Cart = () => {
             <p className="total">
                   Subtotal ({count} items) ₹ <span>{total}.00</span>
             </p>
-            <button onClick={()=>navigate("/purchase",{state:selectedItems})}>Procced to pay</button>
+            <button onClick={()=>navigate("/purchase",{state:selectedItems.join(" , ")})}>Procced to pay</button>
         </div>
       </div>
     </div>

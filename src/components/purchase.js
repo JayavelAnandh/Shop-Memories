@@ -1,18 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./purchase.css";
 import swal from "sweetalert";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Purchase = () => {
-  let [country, setCountry] = useState();
-  let [fullName, setFullName] = useState();
-  let [contact, setContact] = useState();
-  let [pinCode, setPinCode] = useState();
-  let [address1, setAddress1] = useState();
-  let [address2, setAddress2] = useState();
-  let [city, setCity] = useState();
-  let [state, setState] = useState();
+  let [country, setCountry] = useState("");
+  let [fullName, setFullName] = useState("");
+  let [contact, setContact] = useState("");
+  let [pinCode, setPinCode] = useState("");
+  let [address1, setAddress1] = useState("");
+  let [address2, setAddress2] = useState("");
+  let [city, setCity] = useState("");
+  let [state, setState] = useState("");
   let gmail = localStorage.getItem("gmail");
-
+  let location = useLocation();
+  let navigate = useNavigate();
+  let product_name = location.state;
   const handleSubmit=async(event)=>{
         event.preventDefault();
         try {
@@ -28,13 +31,43 @@ const Purchase = () => {
                     city,
                     state,
                     country
-                })
+                }),
+                headers:{
+                    "Content-Type":"application/json"
+                }
             })
+            let response = await res.json();
+            navigate("/homepage");
+
+            swal("Your order is confirmed !!!","Don't worry about the payment this time 😉","success")
         } catch (error) {
             console.log(error);
             swal("error occured",error);
         }
   }
+  const getUserAddress = async()=>{
+        try {
+            let res = await fetch(`http://localhost:9000/shop/address/${gmail}`,{
+                method:"GET",
+            });
+            let response = await res.json();
+            console.log(response);
+            setFullName(response.fullName);
+            setAddress1(response.address1);
+            setAddress2(response.address2);
+            setCity(response.city);
+            setContact(response.contact);
+            setCountry(response.country);
+            setPinCode(response.pinCode);
+            setState(response.state);
+        } catch (error) {
+            console.log(error);
+            swal("error occured",error);
+        }
+  }
+ useEffect(()=>{
+    getUserAddress();
+ },[])
   function selectedSubjectName() {
     var selectedCountry = document.getElementById('country');
     var value = selectedCountry.value;
@@ -47,7 +80,6 @@ const Purchase = () => {
         <div className="col-md-6 addressBox">
           <form className="addressForm">
             <h2>Add Your Delievery Address</h2>
-
             <label htmlFor="country">Country</label>
             <select id="country" name="country" onChange={()=>selectedSubjectName()}>
               <option value={"India"}>India</option>
