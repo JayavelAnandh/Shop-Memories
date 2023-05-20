@@ -19,7 +19,7 @@ const Purchase = () => {
   const handleSubmit=async(event)=>{
         event.preventDefault();
         try {
-            let res = await fetch("http://localhost:9000/shop/purchase",{
+            let res = await fetch("https://shop-memories-be.vercel.app/shop/purchase",{
                 method:"PUT",
                 body:JSON.stringify({
                     gmail,
@@ -47,7 +47,7 @@ const Purchase = () => {
   }
   const getUserAddress = async()=>{
         try {
-            let res = await fetch(`http://localhost:9000/shop/address/${gmail}`,{
+            let res = await fetch(`https://shop-memories-be.vercel.app/shop/address/${gmail}`,{
                 method:"GET",
             });
             let response = await res.json();

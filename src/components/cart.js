@@ -11,7 +11,7 @@ const Cart = () => {
   let selectedItems = [];
   const getAllData = async () => {
     try {
-      let allData = await fetch("http://localhost:9000/shop/cartItems", {
+      let allData = await fetch("https://shop-memories-be.vercel.app/shop/cartItems", {
         method: "GET",
       });
       let response = await allData.json();
@@ -27,7 +27,7 @@ const Cart = () => {
 
   const removeFromCart = async (value) => {
     try {
-      let res = await fetch("http://localhost:9000/shop/removeFromCart", {
+      let res = await fetch("https://shop-memories-be.vercel.app/shop/removeFromCart", {
         method: "POST",
         body: JSON.stringify({
           _id: value._id,
@@ -97,7 +97,7 @@ const Cart = () => {
               })}
               <div className="subtotal col-md-12 col-xl-12">
                 <p>
-                  Subtotal ({count} items) ₹ <span>{total}.00</span>
+                  Subtotal ({count} items) ₹ <span>{total}</span>
                 </p>
               </div>
             </div>
@@ -108,7 +108,7 @@ const Cart = () => {
                 <p className="green">Your order is eligible for FREE Delivery.</p>
             </div>
             <p className="total">
-                  Subtotal ({count} items) ₹ <span>{total}.00</span>
+                  Subtotal ({count} items) ₹ <span>{total}</span>
             </p>
             <button onClick={()=>navigate("/purchase",{state:selectedItems.join(" , ")})}>Procced to pay</button>
         </div>

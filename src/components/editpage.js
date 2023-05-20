@@ -12,7 +12,7 @@ const EditPage=()=>{
 
     const getdata=async()=>{
         try {
-            let productData = await fetch(`http://localhost:9000/shop/id/${location.state}`,{
+            let productData = await fetch(`https://shop-memories-be.vercel.app/shop/id/${location.state}`,{
                 method:"GET",
             });
             let response = await productData.json();
@@ -33,7 +33,7 @@ const EditPage=()=>{
     const handleSubmit=async(event)=>{
         event.preventDefault();
         try {
-            let update = await fetch(`http://localhost:9000/shop/edit/${location.state}`,{
+            let update = await fetch(`https://shop-memories-be.vercel.app/shop/edit/${location.state}`,{
                 method:"PUT",
                 body:JSON.stringify({
                     name,

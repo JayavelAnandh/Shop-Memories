@@ -5,6 +5,7 @@ const DashBoard = ({ title, description, children }) => {
   let navigate = useNavigate();
   let logoutMethod = () => {
     navigate("/");
+    localStorage.removeItem("gmail");
   };
   let userGmail = localStorage.getItem("gmail");
   return (
@@ -17,7 +18,7 @@ const DashBoard = ({ title, description, children }) => {
             color="inherit"
             onClick={() => navigate("/homepage")}
           >
-            <span className="nav-name">HomePage</span>
+            <span className="nav-name">Shop</span>
           </Button>
 
           <Button

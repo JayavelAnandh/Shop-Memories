@@ -9,7 +9,7 @@ const LogIn = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      let res = await fetch("http://localhost:9000/login", {
+      let res = await fetch("https://shop-memories-be.vercel.app/login", {
         method: "POST",
         headers: {
           "content-Type": "application/json",
@@ -25,6 +25,8 @@ const LogIn = () => {
 
       swal("Logged In successfully","","success");
       navigate("/homepage")
+      swal("Welcome to ' ANTIQUE AMAZE '   All our products are antique and historical items 💯" ,      "Our website doesn't has any 🚫 replicas")
+
     } catch (error) {
       console.log(error);
       swal({

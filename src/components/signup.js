@@ -20,7 +20,7 @@ const SignUp = () => {
       });
     } else {
       try {
-        let res = await fetch("http://localhost:9000/signUp", {
+        let res = await fetch("https://shop-memories-be.vercel.app/signUp", {
           method: "POST",
           headers: {
             "content-Type": "application/json",

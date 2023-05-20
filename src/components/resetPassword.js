@@ -17,7 +17,7 @@ const ResetPassword = () => {
       });
     } else {
       try {
-        let res = await fetch("http://localhost:9000/updatePassword", {
+        let res = await fetch("https://shop-memories-be.vercel.app/updatePassword", {
           method: "PUT",
           headers: {
             "content-Type": "application/json",

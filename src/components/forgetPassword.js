@@ -9,7 +9,7 @@ const ForgetPassword=()=>{
     const getVerification=async(event)=>{
         event.preventDefault();
         try {
-            let res=  await fetch("http://localhost:9000/forget",{
+            let res=  await fetch("https://shop-memories-be.vercel.app/forget",{
             method:"PUT",
             headers:{
                 "content-Type":"application/json"
@@ -25,7 +25,7 @@ const ForgetPassword=()=>{
             let code = prompt("Enter the verification Code","")
 
             if(code){
-                let res = await fetch("http://localhost:9000/verification",{
+                let res = await fetch("https://shop-memories-be.vercel.app/1verification",{
                     method:"POST",
                     headers:{
                         "content-Type": "application/json",

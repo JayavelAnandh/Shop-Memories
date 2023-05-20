@@ -10,11 +10,10 @@ const HomePage = () => {
   const navigate = useNavigate();
   useEffect(() => {
     retriveAllData();
-    swal("Welcome to ' ANTIQUE AMAZE '   All our products are antique and historical items 💯" ,      "Our website doesn't has any 🚫 replicas")
   }, []);
   const retriveAllData = async () => {
     try {
-      let res = await fetch("http://localhost:9000/shop", {
+      let res = await fetch("https://shop-memories-be.vercel.app/shop", {
         method: "GET",
       });
       const response = await res.json();
@@ -28,7 +27,7 @@ const HomePage = () => {
 
   const removeData=async(id)=>{
       try {
-         let res = await fetch(`http://localhost:9000/shop/remove/${id}`,{
+         let res = await fetch(`https://shop-memories-be.vercel.app/shop/remove/${id}`,{
             method:"DELETE",
 
          });
@@ -42,7 +41,7 @@ const HomePage = () => {
   }
   const addToCart=async(value)=>{
       try {
-        let res = await fetch("http://localhost:9000/shop/addToCart",{
+        let res = await fetch("https://shop-memories-be.vercel.app/shop/addToCart",{
           method:"POST",
           body:JSON.stringify({
             _id:value._id,

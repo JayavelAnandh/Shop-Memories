@@ -11,7 +11,7 @@ const AddProduct =()=>{
     const handleSubmit=async(event)=>{
         event.preventDefault();
         try {
-            let res = await fetch("http://localhost:9000/shop/newProduct",{
+            let res = await fetch("https://shop-memories-be.vercel.app/shop/newProduct",{
                 method:"POST",
                 body:JSON.stringify({
                     name,
