@@ -52,7 +52,7 @@ const Cart = () => {
     <div className="container-fluid cart">
       <div className="row main">
         <div className="col-md-9 col-xl-9 cartItems">
-          <h2>Shopping Cart</h2>
+          <h2>Shopping Cart <i class="fa-solid fa-cart-shopping"></i></h2>
           <hr />
           <div className="container-fluid">
             <div className="row">

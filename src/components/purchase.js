@@ -22,6 +22,7 @@ const Purchase = () => {
             let res = await fetch("https://shop-memories-be.vercel.app/shop/purchase",{
                 method:"PUT",
                 body:JSON.stringify({
+                    product_name,
                     gmail,
                     fullName,
                     contact,

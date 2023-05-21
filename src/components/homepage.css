@@ -20,8 +20,25 @@
     padding: 3px;
     border-radius: 5px;
 }
-.card .btn{
-    height: 30px;
-    align-items: center;
-    line-height: 10px;
+
+.card img{
+    height: 45%;
+}
+.btnArea{
+   display: flex;
+   flex-direction: column;
+}
+.btnArea .addToCartBtn{
+    background-color: orange;
+    border: 0px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+.btnArea span{
+    margin-top: 4%;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+    display: flex;
+   justify-content: space-between !important;
 }

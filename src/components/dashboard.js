@@ -18,7 +18,7 @@ const DashBoard = ({ title, description, children }) => {
             color="inherit"
             onClick={() => navigate("/homepage")}
           >
-            <span className="nav-name">Shop</span>
+            <span className="nav-name">Shop <i class="fa-solid fa-house"></i></span>
           </Button>
 
           <Button
@@ -26,7 +26,7 @@ const DashBoard = ({ title, description, children }) => {
             color="inherit"
             onClick={() => navigate("/")}
           >
-            <span className="nav-name">Login</span>
+            <span className="nav-name">Login <i class="fa-solid fa-right-to-bracket"></i></span>
           </Button>
 
           {userGmail == "AdminFounder@gmail.com" ? <Button
@@ -34,7 +34,7 @@ const DashBoard = ({ title, description, children }) => {
             color="inherit"
             onClick={() => navigate("/add")}
           >
-            <span className="nav-name">Add Product</span>
+            <span className="nav-name">Add Product <i class="fa-solid fa-plus"></i></span>
           </Button> :""}
 
           <Button
@@ -42,7 +42,7 @@ const DashBoard = ({ title, description, children }) => {
             color="inherit"
             onClick={logoutMethod}
           >
-            <span className="nav-name">Logout</span>
+            <span className="nav-name">Logout <i class="fa-solid fa-right-from-bracket"></i></span>
           </Button>
 
           <Button
@@ -50,7 +50,7 @@ const DashBoard = ({ title, description, children }) => {
             color="inherit"
             onClick={()=>navigate("/cart")}
           >
-            <span className="nav-name">Cart</span>
+            <span className="nav-name">Cart <i class="fa-solid fa-cart-shopping"></i></span>
           </Button>
         </Toolbar>
       </AppBar>

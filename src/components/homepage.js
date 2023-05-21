@@ -77,9 +77,13 @@ const HomePage = () => {
                 <span className="sale" title="Anniversay discount sale !!!">Great Festival Sale</span>
                 <p className="card-text">₹ <span style={{fontSize:"24px"}} title="Prices may increase after the sale ends">{value.price}</span></p>
                 <p className="card-text">Get it by <b title="Guaranteed 1 week delievery"> next Wednesday</b></p>
-                {userGmail == "AdminFounder@gmail.com" ? <span><button className="btn btn-primary" onClick={()=>navigate("/edit",{state:value._id})}>Edit</button>
-                <button className="btn btn-danger" onClick={()=>removeData(value._id)}>Remove</button></span>:""}
-                <button className="btn btn-info" title="Added product can be purchased from cart" onClick={()=>addToCart(value)}>Add To Cart</button>
+                <div className="btnArea">
+                <button className="btn btn-info addToCartBtn" title="Added product can be purchased from cart" onClick={()=>addToCart(value)}>Add To Cart <i class="fa-solid fa-cart-shopping"></i></button>
+                {userGmail == "AdminFounder@gmail.com" ? <span><button className="btn btn-primary" onClick={()=>navigate("/edit",{state:value._id})}>Edit   <i class="fa-solid fa-pencil" style={{marginLeft:"10px"}}></i></button>
+                <button className="btn btn-danger" onClick={()=>removeData(value._id)}>Remove <i class="fa-solid fa-trash" style={{marginLeft:"10px"}}></i></button></span>:""}
+                {/* {userGmail == "AdminFounder@gmail.com" ? <button className="btn btn-primary" onClick={()=>navigate("/edit",{state:value._id})}>Edit</button>:""}
+                {userGmail == "AdminFounder@gmail.com" ? <button className="btn btn-danger" onClick={()=>removeData(value._id)}>Remove</button>:""} */}
+                </div>
               </div>
             </div>
             
