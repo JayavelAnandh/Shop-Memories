@@ -9,7 +9,6 @@ import ForgetPassword from './components/forgetPassword';
 import HomePage from './components/homepage';
 import LogIn from './components/login';
 import Purchase from './components/purchase';
-import PurchaseHistory from './components/purchaseHistory';
 import ResetPassword from './components/resetPassword';
 import SignUp from './components/signup';
 
